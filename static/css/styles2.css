@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  background-color: #0F1623;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #04E1FF;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding: 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container.hero {
+  padding: 3rem 0;
+  color: #ffffff;
+  min-height: 125vh;
+  background: linear-gradient(0deg, #0F1623 -3.36%, #1E3342 66.71%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply, normal;
+  z-index: initial;
+  text-shadow: 0 2px 15px #000000;
+}
+.container.hero,
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.container.hero .content {
+  position: relative;
+  z-index: 1;
+}
+.container.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(16, 23, 37, 0) 50%, #0F1623 100%);
+}
+.container.hero.shrunk {
+  min-height: 60vh;
+}
+.container.hero h1 {
+  font-size: 3rem;
+}
+.container.hero img {
+  max-width: 100%;
+  width: 350px;
+  display: block;
+}
+.container.hero .date {
+  color: #ffffff;
+}
+.container.hero .date span {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.bg-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.aurora {
+  position: absolute;
+  min-width: 900px;
+  max-width: 65%;
+  user-select: none;
+  animation: rotate 180s infinite linear;
+}
+
+
+
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: linear-gradient(106.65deg, #00AEFF 13%, rgba(128, 0, 255, 0.31) 85%);
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  min-width: 140px;
+  padding: 0 20px;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  text-shadow: none;
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); */
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  background: linear-gradient(106.65deg, #5399b8 13%, rgba(51, 24, 83, 0.774) 85%);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 3px solid;
+  border-image: linear-gradient(106.65deg, #00AEFF 13%, rgba(128, 0, 255, 0.31) 85%) 1;
+}
+
+
+
+.contact {
+  text-shadow: 0 2px 15px #000000;
+  padding: 5rem 0;
+  color: #ffffff;
+}
+.contact h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+.contact p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 4rem 0 2rem;
+  font-size: 1.3rem;
+}
+.contact .separator {
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+
+
+
+
+
+footer {
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1;
+  padding: 40px 0 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+footer a {
+  padding: 0 10px;
+}
+footer i {
+  transition: all 0.2s ease;
+}
+footer a:hover i {
+  font-size: 2rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.aurora:nth-child(1) {
+  display: none;
+}
+.aurora:nth-child(2) {
+  right:-145%;
+  top:20rem;
+}
+.aurora:nth-child(3) {
+  left:-105%;
+  top:45rem;
+}
+.aurora:nth-child(4) {
+  left:-195%;
+  top:70rem;
+  width:2400px;
+  max-width:none;
+}
+.aurora:nth-child(5) {
+  left:-100%;
+  top:200rem;
+}
+.aurora:nth-child(6) {
+  right:-100%;
+  top:250rem;
+}
+
+
+
+/** Background images corrections for different screen sizes **/
+
+@media screen and (min-width: 500px) {
+
+  
+
+  .aurora:nth-child(1) {
+    display: none;
+  }
+  .aurora:nth-child(2) {
+    right:-115%;
+    top:20rem;
+  }
+  .aurora:nth-child(3) {
+    left:-105%;
+    top:45rem;
+  }
+  .aurora:nth-child(4) {
+    left:-195%;
+    top:70rem;
+    width:2400px;
+    max-width:none;
+  }
+  .aurora:nth-child(5) {
+    left:-100%;
+    top:200rem;
+  }
+  .aurora:nth-child(6) {
+    right:-100%;
+    top:250rem;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  .container {
+    padding: 0 60px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .container.hero {
+    min-height: 100vh;
+  }
+
+ 
+  .contact {
+    padding: 5rem 60px;
+  }
+
+
+  .aurora:nth-child(1) {
+    display: initial;
+    left:-75%;
+  }
+  .aurora:nth-child(2) {
+    right:-70%;
+    top:10rem;
+  }
+  .aurora:nth-child(3) {
+    left:-50%;
+    top:50rem;
+  }
+  .aurora:nth-child(4) {
+    left:-120%;
+    top:70rem;
+    width:2400px;
+    max-width:none;
+  }
+  .aurora:nth-child(5) {
+    left:-70%;
+    top:180rem;
+  }
+  .aurora:nth-child(6) {
+    right:-72%;
+    top:220rem;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  .aurora:nth-child(1) {
+    left:-55%;
+  }
+  .aurora:nth-child(2) {
+    right:-50%;
+    top:10rem;
+  }
+  .aurora:nth-child(3) {
+    left:-40%;
+    top:50rem;
+  }
+  .aurora:nth-child(4) {
+    left:-75%;
+    top:70rem;
+    width:2400px;
+    max-width:none;
+  }
+  .aurora:nth-child(5) {
+    left:-50%;
+    top:180rem;
+  }
+  .aurora:nth-child(6) {
+    right:-52%;
+    top:220rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  
+  .aurora:nth-child(1) {
+    left:-50%;
+  }
+  .aurora:nth-child(2) {
+    right:-52%;
+    top:10rem;
+  }
+  .aurora:nth-child(3) {
+    left:-40%;
+    top:55rem;
+  }
+  .aurora:nth-child(4) {
+    left:-55%;
+    top:70rem;
+    width:2400px;
+    max-width:none;
+  }
+  .aurora:nth-child(5) {
+    left:-40%;
+    top:180rem;
+  }
+  .aurora:nth-child(6) {
+    right:-42%;
+    top:220rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .aurora:nth-child(1) {
+    left:-34%;
+  }
+  .aurora:nth-child(2) {
+    right:-35%;
+    top:10rem;
+  }
+  .aurora:nth-child(3) {
+    left:-25%;
+    top:45rem;
+  }
+  .aurora:nth-child(4) {
+    left:-30%;
+    top:70rem;
+    width:2400px;
+    max-width:none;
+  }
+  .aurora:nth-child(5) {
+    left:-35%;
+    top:180rem;
+  }
+  .aurora:nth-child(6) {
+    right:-28%;
+    top:220rem;
+  }
+}

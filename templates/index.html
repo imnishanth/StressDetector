@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress management</title>
+    <link rel="stylesheet" href="{{ url_for( 'static', filename='css/style.css' ) }}">
+    <!-- Smooth scroll js-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Hero / header Section-->
+    <section id="header">
+        <div class="container">
+            
+            <div class="header-text">
+                <h1>Stress Detection using <br> Image  Recognition and CNN </h1>
+                <span class="square"></span>
+                <p>
+                    Stress is commonly defined as a feeling of strain and pressure. Stress is a feeling of emotional or physical tension. It can come from any event or thought that makes you feel frustrated, angry, or nervous. 
+
+                    Stress is related to lifestyle; therefore, especially for mobile automated lifestyle counselling and analysis services, the need arises to identify stress automatically
+
+
+                </p>
+                
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero Section -->
+    <!--Creation of side Navigation -->
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">PROBLEM STATEMENT</a></li>
+            <li><a href="#courses">METHODOLOGY</a></li>
+        </ul>
+    </nav>
+    <!-- Adding menu icon-->
+    <img id="menuBtn" src="{{ url_for( 'static', filename='img/menu.png' ) }}" alt="menu icon">
+    <!-- About section-->
+    <section id="about">
+        <div class="about-left-col">
+            <img src="{{ url_for( 'static', filename='img/about.png' ) }}" alt="about-image">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Problem Statment</h1>
+                <span class="square"></span>
+                <p>
+                  The area of focus in this project work is to identify if a student/working professionals is stressed. 
+Stress is like a disease which affects a human being and due to lack of awareness is mostly ignored.
+ It has serious outcomes and at times can also be fatal leading to an increase in the number of suicide cases. In this paper we present a method to determine whether a person is stressed by continuously determining the emotion of the person for a particular duration of time.
+
+                </p><br><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                
+            </div>
+        </div>
+
+    <!-- Start of Courses Section -->
+    <section id="courses">
+        <div class="container course-row">
+            <div class="course-left-col">
+                <div class="course-text">
+                    <h1> Methodology<br>Adopted </h1>
+                    <span class="square"></span>
+                    <p>
+                       The Fer2013 dataset is one of the most challenging datasets in the Deep Learning field till date. Hence, to achieve a higher accuracy wrt emotion detection from this dataset would require more than just a simple CNN model.<br>
+
+Data augmentation techniques were used before we trained our model on this dataset due to the under representation of some emotions in the dataset. Training and validation was split into the classic 80:20 ratio.<br>
+
+Xception model was separated into tiny, mini and big exception with varying aspects along with the simple CNN model as well. Each model was trained on the dataset and the one which gave the best accuracy was used.<br>
+
+Once we load the model into the application, we detect the face and extract the required features for stress calculator which is mainly the eyebrows and lips.<br>
+
+Studies have shown that the contraction of lips (lip twitching) is when a person is nervous/stressed and the distance between left and right eyebrow if maximum implies relief and if the eyebrows are contracted, the distance between them is less and hence the person is in stress.<br>
+
+Using these normalised values of eye and lip distance we’re able to calculate stress value.<br>
+
+                    </p>
+                    <div class="line">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-right-col">
+                <img src="{{ url_for( 'static', filename='img/course.png' ) }}">
+            </div>
+        </div>
+    </section>
+    <!-- End of Courses Section -->
+    <!-- start of Offer Section(marcup same as about )-->
+    <section id="offer">
+        <div class="about-left-col">
+            <img src="{{ url_for( 'static', filename='img/offer.png' ) }}" alt="about-image">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Try it yourself<br>Know if you have<br> stress or not</h1>
+                <span class="square"></span>
+                <p>
+                   There is evidence that stress is linked with many diseases, playing a crucial role in the development of cardiovascular diseases, diabetes, or asthma, and it also significantly influences the later course of these diseases<br>
+                   <strong>Are you stressed?</strong>
+                </p>
+                <button class="common-btn" onclick="window.location.href='{{ url_for('stress') }}';">Check Now </button>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End of Offer Section -->
+
+    <!-- Contact Section -->
+    
+    <!-- Footer-->
+    <section id="footer">
+        <div class="container footer-row">
+            <hr>
+            <div class="footer-left-col">
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h4>Nishanth R</h4>
+                        <small>1PE17IS056</small><br>
+                      
+                    </div>
+                    <div class="link-title">
+                        <h4>Nikhil Kumar</h4>
+                        <small>1PE17IS055</small><br>
+                        
+                    </div>
+                    <div class="link-title">
+                        <h4> Kavya D</h4>
+                        <small>1PE17IS038</small><br>
+                       
+                    </div>
+                    <div class="link-title">
+                        <h4> Raj Oberoi</h4>
+                        <small>1PE16IS081</small><br>
+                        
+                    </div>
+                </div>
+            </div>
+        <!-- <div class="footer-right-col">
+                <div class="footer-info">
+                    <div class="copyright-text">
+                        <small>Team 16-A Pes University</small><br>
+                        <small>copyright 2021 Team 16-A</small>
+                    </div>
+                    
+                </div>
+            </div>
+        -->
+        </div>
+    </section>
+    <!-- Social icons-->
+    <div class="social-icons">
+        <img src="{{ url_for( 'static', filename='img/facebook.png' ) }}">
+        <img src="{{ url_for( 'static', filename='img/instagram.png' ) }}">
+        <img src="{{ url_for( 'static', filename='img/twitter.png' ) }}">
+        <img src="{{ url_for( 'static', filename='img/linkedin.png' ) }}">
+    </div>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+            } else {
+                sideNav.style.right = "-250px";
+            }
+        }
+        /* scroll js */
+	var scroll = new SmoothScroll('a[href*="#"]',{speed:1000 ,speedAsDuration:true});
+    </script>
+</body>
+
+</html>
