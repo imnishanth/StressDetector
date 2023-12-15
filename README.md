@@ -6,3 +6,5 @@ Tracks eyebrow and lip movements to calculate stress value.
 
 Implemented as a web app on Flask.
 
+![Output](https://github.com/imnishanth/StressDetector/blob/main/stress.png)
+
